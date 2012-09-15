@@ -55,7 +55,6 @@ puts Randomer::Ranger.randmon_string(
 )
 # => "o.42zCQ1ER'W1Q#A+YmgNbOexl((Xk9YSO+BP029Z6R4g+LQBo"
 
-
 # random with percent hash
 percent_list = {
   :a => 400,  # Most probability get this!
