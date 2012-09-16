@@ -7,7 +7,7 @@ Gem::Specification.new do |gem|
   gem.name          = "randomer"
   gem.version       = Randomer::VERSION
   gem.authors       = ["Zhuang Sirui"]
-  gem.email         = ["zhuangsirui@nibirutech.com"]
+  gem.email         = ["siriusibunny@gmail.com"]
   gem.description   = %q{A gem for random everything}
   gem.summary       = %q{Write a gem summary}
   gem.homepage      = "http://www.skzsr.com/"
