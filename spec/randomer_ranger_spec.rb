@@ -19,8 +19,8 @@ describe Randomer::Ranger do
 
   it "Get randmon lower string" do
     string_length = 10
-    p Randomer::Ranger.randmon_string string_length
-    p Randomer::Ranger.randmon_string(
+    Randomer::Ranger.randmon_string string_length
+    Randomer::Ranger.randmon_string(
       string_length,
       :lower
     )
@@ -28,7 +28,7 @@ describe Randomer::Ranger do
 
   it "Get randmon upper string" do
     string_length = 10
-    p Randomer::Ranger.randmon_string(
+    Randomer::Ranger.randmon_string(
       string_length,
       :upper
     )
@@ -36,7 +36,7 @@ describe Randomer::Ranger do
 
   it "Get randmon upper and lower string" do
     string_length = 10
-    p Randomer::Ranger.randmon_string(
+    Randomer::Ranger.randmon_string(
       string_length,
       :upper,
       :lower
@@ -45,7 +45,7 @@ describe Randomer::Ranger do
 
   it "Get randmon symbol string" do
     string_length = 10
-    p Randomer::Ranger.randmon_string(
+    Randomer::Ranger.randmon_string(
       string_length,
       :symbol
     )
@@ -53,7 +53,7 @@ describe Randomer::Ranger do
 
   it "Get randmon all string" do
     string_length = 50
-    p Randomer::Ranger.randmon_string(
+    Randomer::Ranger.randmon_string(
       string_length,
       :symbol,
       :upper,

@@ -6,7 +6,6 @@ describe Randomer::Percent do
       :a => 900,
       :b => 1000,
       :c => 870,
-      :d => 0,
       :e => 0,
     }
   end
@@ -15,7 +14,6 @@ describe Randomer::Percent do
     1000.times do
       result = Randomer::Percent.pick_one @percent_list
       @percent_list.include?(result).should == true
-      (result == :d).should == false
       (result == :e).should == false
     end
   end

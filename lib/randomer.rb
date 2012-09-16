@@ -9,7 +9,6 @@ module Randomer
       # [params] * Mixed range Range or Array
       #
       def rand_in(list, *args)
-        return nil unless options.is_a? Hash
         list = list.to_a if list.is_a? Range
         return nil unless list.is_a? Array
 
@@ -82,7 +81,7 @@ module Randomer
           return false unless value.is_a? Integer
 
           interval << (sum_value...(sum_value += value))
-          keys << key
+          keys     << key
         end
         return false if sum_value <= 0
 

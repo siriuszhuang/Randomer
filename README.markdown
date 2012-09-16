@@ -21,8 +21,11 @@ Or install it yourself as:
 ```ruby
 # Get one in an array or a range random
 range_number = 1..1000
+array_string = ['cp', 'mv', 'ab', 'git', 'ruby']
 puts Randomer::Ranger.rand_in range_number
 # => 855
+puts Randomer::Ranger.rand_in array_string
+# => "ruby"
 
 puts Randomer::Ranger.randmon_string 10
 # => "myjxquvpsr"
