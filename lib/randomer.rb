@@ -60,7 +60,7 @@ module Randomer
   class Percent
     class << self
       ##
-      # 根据一个hash中value指定的权重随机获取一个Symbol
+      # 根据一个hash中value指定的权重随机获取一个Symbol或String
       #
       # [params] Hash hash
       #
@@ -77,7 +77,7 @@ module Randomer
         interval  = []
         keys      = []
         hash.each do |key, value|
-          return false unless key.is_a? Symbol
+          return false unless key.is_a? Symbol or key.is_a? String
           return false unless value.is_a? Integer
 
           interval << (sum_value...(sum_value += value))
