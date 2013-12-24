@@ -7,6 +7,7 @@ describe Randomer::Percent do
       :b => 1000,
       :c => 870,
       :e => 0,
+      'd' => 10000,
     }
   end
 
