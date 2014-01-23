@@ -77,7 +77,7 @@ module Randomer
         interval  = []
         keys      = []
         hash.each do |key, value|
-          return false unless key.is_a? Symbol or key.is_a? String
+          return false unless key.is_a? Symbol or key.is_a? String or key.is_a? Integer
           return false unless value.is_a? Integer
 
           interval << (sum_value...(sum_value += value))
