@@ -1,6 +1,7 @@
 require 'spec_helper'
 
 describe Randomer::Percent do
+
   before(:each) do
     @percent_list = {
       :a => 900,
@@ -18,4 +19,12 @@ describe Randomer::Percent do
       (result == :e).should == false
     end
   end
+
+  it "Pick some from percent list" do
+    (0..10).each do |count|
+      Randomer::Percent.pick_some(@percent_list, count).count.should <= @percent_list.keys.count
+      Randomer::Percent.pick_some(@percent_list, count, false).count.should == count
+    end
+  end
+
 end

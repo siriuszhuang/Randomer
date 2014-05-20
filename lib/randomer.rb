@@ -58,6 +58,7 @@ module Randomer
   end
 
   class Percent
+
     class << self
       ##
       # 根据一个hash中value指定的权重随机获取一个Symbol或String
@@ -91,6 +92,20 @@ module Randomer
           return keys[index] if range.include? rand_result
         end
       end
+
+      def pick_some(hash, count, mutex = true)
+        hash = hash.clone
+        _some = []
+        count.times do
+          key = self.pick_one hash
+          next if not key
+          _some << key
+          hash.delete key if mutex
+        end
+        _some
+      end
+
     end
+
   end
 end
